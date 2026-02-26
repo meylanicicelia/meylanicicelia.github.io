@@ -2,92 +2,141 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum Vitae - Meylani Cicelia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f4f4f4;
-        }
-
-        .container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            max-width: 800px;
-            margin: auto;
-        }
-
-        h1 {
-            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background: #eef2f5;
             color: #333;
         }
-
-        h2 {
-            border-bottom: 2px solid #444;
-            padding-bottom: 5px;
-            color: #444;
+        .header {
+            background: #4a90e2;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
         }
-
-        ul {
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .header p {
+            margin: 5px 0 0;
+            font-weight: 300;
+        }
+        .main {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .sidebar {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            font-size: 1.5em;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        .section ul {
             padding-left: 20px;
         }
-
-        .info p {
-            margin: 5px 0;
+        .section ul li {
+            margin-bottom: 8px;
         }
-
-        .section {
-            margin-top: 20px;
+        .contact p {
+            margin: 8px 0;
         }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+2
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Curriculum Vitae</h1>
+<header class="header">
+    <h1>Meylani Cicelia</h1>
+    <p>Web Developer & Data Enthusiast</p>
+</header>
 
-    <div class="section info">
-        <h2>Data Pribadi</h2>
-        <p><strong>Nama:</strong> Meylani Cicelia</p>
-        <p><strong>Email:</strong> meylani@email.com</p>
-        <p><strong>No. HP:</strong> 08xxxxxxxxxx</p>
-        <p><strong>Alamat:</strong> Denpasar, Bali</p>
-    </div>
+<div class="main">
+    <aside class="sidebar">
+        <div class="section contact">
+            <h2>Kontak</h2>
+            <p><strong>Email:</strong> meylani@email.com</p>
+            <p><strong>Telepon:</strong> 08xxxxxxxxxx</p>
+            <p><strong>Alamat:</strong> Denpasar, Bali</p>
+            <p><strong>LinkedIn:</strong> linkedin.com/in/meylani</p>
+            <p><strong>GitHub:</strong> github.com/meylanicicelia</p>
+        </div>
+        <div class="section skills">
+            <h2>Keahlian</h2>
+            <ul>
+                <li>HTML / CSS / JavaScript</li>
+                <li>React, Vue</li>
+                <li>Node.js, Express</li>
+                <li>Ruby on Rails</li>
+                <li>MySQL, MongoDB</li>
+                <li>Git & GitHub</li>
+                <li>Data Analysis (Python, Pandas)</li>
+            </ul>
+        </div>
+    </aside>
 
-    <div class="section">
-        <h2>Tentang Saya</h2>
-        <p>Saya adalah mahasiswa yang memiliki minat dalam bidang Web Development dan Data Analysis. 
-        Terbiasa menggunakan HTML, CSS, JavaScript, serta framework backend.</p>
-    </div>
-
-    <div class="section">
-        <h2>Pendidikan</h2>
-        <ul>
-            <li>S1 Ilmu Komputer - Universitas XYZ (2022 - Sekarang)</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Keahlian</h2>
-        <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Node.js</li>
-            <li>Ruby on Rails</li>
-            <li>MySQL</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Portfolio</h2>
-        <ul>
-            <li><strong>PasarMantap</strong> - Node.js Based Web Application</li>
-            <li><strong>EduTrack</strong> - Rails Based Web Application</li>
-        </ul>
-    </div>
-
+    <section class="content">
+        <div class="section summary">
+            <h2>Profil Singkat</h2>
+            <p>Mahasiswa Ilmu Komputer dengan antusiasme tinggi terhadap pembangunan web modern dan analisis data. Senang menyelesaikan masalah secara kreatif dan belajar teknologi baru setiap hari.</p>
+        </div>
+        <div class="section experience">
+            <h2>Pengalaman</h2>
+            <ul>
+                <li><strong>Intern Web Developer</strong> - PT Contoh Teknologi (2024)
+                    <br> Mengembangkan modul front-end menggunakan React dan memperbaiki bug pada API Node.js.</li>
+                <li><strong>Freelance</strong> - Pembuatan situs e-commerce <em>PasarMantap</em> menggunakan Node.js dan Express.</li>
+            </ul>
+        </div>
+        <div class="section education">
+            <h2>Pendidikan</h2>
+            <ul>
+                <li><strong>S1 Ilmu Komputer</strong> - Universitas XYZ (2022 - Sekarang)</li>
+            </ul>
+        </div>
+        <div class="section portfolio">
+            <h2>Portofolio</h2>
+            <ul>
+                <li><strong>PasarMantap</strong> - A full-featured Node.js marketplace web app.</li>
+                <li><strong>EduTrack</strong> - Sebuah platform pelacakan pembelajaran dibangun dengan Ruby on Rails.</li>
+            </ul>
+        </div>
+    </section>
 </div>
+
+<footer>
+    © 2026 Meylani Cicelia. Semua hak dilindungi.
+</footer>
 
 </body>
 </html>
